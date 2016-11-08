@@ -109,14 +109,14 @@
   when: "{{ consul_node_type == 'client' }}"
   notify: Restart consul
 
-- name: Install consul scripts
-  copy:
-    src:   "{{ item }}"
-    dest:  "{{ consul_scripts_dir }}/{{ item }}"
-    owner: "{{ consul_user }}"
-    group: "{{ consul_group }}"
-    mode:  0755
-  with_items: "{{ consul_scripts }}"
+#- name: Install consul scripts
+#  copy:
+#    src:   "{{ item }}"
+#    dest:  "{{ consul_scripts_dir }}/{{ item }}"
+#    owner: "{{ consul_user }}"
+#    group: "{{ consul_group }}"
+#    mode:  0755
+#  with_items: "{{ consul_scripts }}"
 
 #- name: Create watchers service definition
 #  template: src=watchers.json.j2 dest={{ consul_conf_dir }}/watchers.json mode=0644
