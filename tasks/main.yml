@@ -132,7 +132,7 @@
 - name: Create consul systemd service script
   template:
     src:  consul.service.j2
-    dest: /usr/lib/systemd/system/consul.service
+    dest: /lib/systemd/system/consul.service
     mode: 0644
   notify: Restart consul
   when: ansible_service_mgr == 'systemd'
