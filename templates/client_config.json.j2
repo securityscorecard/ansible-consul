@@ -4,7 +4,7 @@
     "data_dir":            "{{ consul_data_dir }}",
     "bind_addr":           "{{ consul_bind_ip }}",
     "client_addr":         "0.0.0.0",
-    "node_name":           "{{ ansible_hostname }}",
+    "node_name":           "{{ ansible_fqdn }}",
     "ui_dir":              "{{ consul_web_ui_dir }}",
     "encrypt":             "{{ consul_encrypt_key }}",
     "log_level":           "{{ consul_log_level }}",
