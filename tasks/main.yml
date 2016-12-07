@@ -68,6 +68,7 @@
   shell: >
       grep {{ consul_pkg }} {{ consul_home }}/{{ consul_checksum_file }}
   register: chksum
+  changed_when: False
 
 - name: Download consul package
   get_url:
