@@ -11,6 +11,7 @@
     "enable_syslog":       {{ consul_enable_syslog|default(false)|bool|lower }},
     "leave_on_terminate":  {{ consul_leave_on_terminate|default(false)|bool|lower }},
     "start_join":          [ "{{ consul_nodes|join('", "') }}" ],
+    "disable_remote_exec": {{ consul_disable_remote_exec|default(false)|bool|lower }},
     "performance": {
         "raft_multiplier": {{ consul_performance_raft_multiplier }}
     }
