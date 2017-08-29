@@ -145,4 +145,4 @@
   service: name=consul pattern={{ consul_bin_dir }}/consul enabled=yes state=started 
 
 - include: web_ui.yml
-  when: "{{ consul_install_web_ui }}"
+  when: consul_install_web_ui
